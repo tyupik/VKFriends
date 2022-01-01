@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VKFriends</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login_hello">Нажмите \"Войти\", чтобы увидеть ваших друзей Вконтакте</string>
+    <string name="login_enter">Войти</string>
+    <string name="error_loading">Ошибка во время загрузки</string>
+    <string name="retry_loading">Повторить</string>
+</resources>
