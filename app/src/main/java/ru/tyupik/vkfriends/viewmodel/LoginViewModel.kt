@@ -1,30 +1,32 @@
 package ru.tyupik.vkfriends.viewmodel
 
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
-import ru.tyupik.vkfriends.model.FriendModelState
+import ru.tyupik.vkfriends.model.LoginModelState
 import java.lang.Exception
 
 
 class LoginViewModel : ViewModel() {
 
-    private val _dataState = MutableLiveData<FriendModelState>()
-    val dataState: LiveData<FriendModelState>
+    private val _dataState = MutableLiveData<LoginModelState>()
+    val dataState: LiveData<LoginModelState>
         get() = _dataState
 
     fun login() {
+
         try {
-            _dataState.value = FriendModelState(loading = true)
-            //загрузка друзей
+            _dataState.value = LoginModelState(loading = true)
+            //логин ВК
 
-
-            _dataState.value = FriendModelState(success = true)
+            Handler(Looper.getMainLooper()).postDelayed({
+                _dataState.value = LoginModelState(success = true)
+            }, 500)
         } catch (e: Exception) {
-            _dataState.value = FriendModelState(error = true)
+            _dataState.value = LoginModelState(error = true)
         }
-
     }
 
 

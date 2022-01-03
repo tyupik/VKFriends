@@ -6,4 +6,7 @@
     <string name="login_enter">Войти</string>
     <string name="error_loading">Ошибка во время загрузки</string>
     <string name="retry_loading">Повторить</string>
+    <string name="friends_search_hint">Поиск</string>
+    <string name="friends_not_found">Список друзей пуст</string>
+    <string name="friend_no_city">Город не указан</string>
 </resources>

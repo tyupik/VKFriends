@@ -18,7 +18,7 @@ class LoginFragment : Fragment() {
 //    @Inject
 //    lateinit var loginViewModel: LoginViewModel
 
-    val loginViewModel = LoginViewModel()
+    private val loginViewModel = LoginViewModel()
 
 
     override fun onCreateView(
@@ -45,6 +45,10 @@ class LoginFragment : Fragment() {
                         loginViewModel.login()
                     }
                     .show()
+            }
+            if (state.loading) {
+                binding.btnLogin.visibility = View.GONE
+                binding.cpiLogin.visibility = View.VISIBLE
             }
             if (state.success) {
                 findNavController().navigate(R.id.action_loginFragment_to_friendsFragment)
