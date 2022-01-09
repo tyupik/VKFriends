@@ -9,4 +9,5 @@
     <string name="friends_search_hint">Поиск</string>
     <string name="friends_not_found">Список друзей пуст</string>
     <string name="friend_no_city">Город не указан</string>
+    <integer name="com_vk_sdk_AppId">8046235</integer>
 </resources>

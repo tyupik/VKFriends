@@ -2,7 +2,13 @@ package ru.tyupik.vkfriends.repository
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asFlow
+import com.vk.api.sdk.VK
+import com.vk.api.sdk.VKApiCallback
+import com.vk.api.sdk.internal.ApiCommand
+import com.vk.api.sdk.requests.VKRequest
+import com.vk.api.sdk.utils.VKUtils
 import ru.tyupik.vkfriends.model.FriendModel
+
 
 class FriendsRepositoryImpl : FriendsRepository {
 
@@ -55,4 +61,5 @@ class FriendsRepositoryImpl : FriendsRepository {
 //            }
         }
     }
+
 }
